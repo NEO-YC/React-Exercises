@@ -1,0 +1,93 @@
+/* סגנון כללי לכותרת העליונה */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(270deg, #ff0080, #ff8c00, #40e0d0);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* אנימציה לצבעים מתחלפים */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* לוגו */
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  letter-spacing: 2px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 20px #fff;
+}
+
+/* ניווט */
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+/* קישורים */
+.link {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+/* קו תחתון מתחלף בהנפשה */
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.link.active {
+  color: #ffff66;
+  text-shadow: 0 0 8px #fff;
+}
+
+/* איפוס רווחים מהדפדפן */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ודא שה-header באמת נמתח מקצה לקצה */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(270deg, #ff0080, #ff8c00, #40e0d0);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
